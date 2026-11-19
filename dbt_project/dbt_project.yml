@@ -1,0 +1,40 @@
+name: earnings_bench
+version: 0.1.0
+config-version: 2
+
+profile: earnings_bench
+
+model-paths: ["models"]
+analysis-paths: ["analyses"]
+test-paths: ["tests"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+snapshot-paths: ["snapshots"]
+
+target-path: "target"
+clean-targets: ["target", "dbt_packages"]
+
+models:
+  earnings_bench:
+    staging:
+      +materialized: view
+      +schema: staging
+    marts:
+      +materialized: table
+      +schema: marts
+
+seeds:
+  earnings_bench:
+    +schema: seeds
+    companies:
+      +column_types:
+        ticker: varchar(10)
+        name: varchar(200)
+        sector: varchar(50)
+
+vars:
+  # Fiscal-period window — covered quarters for the benchmark
+  start_fiscal_year: 2023
+  start_fiscal_quarter: 2
+  end_fiscal_year: 2025
+  end_fiscal_quarter: 3

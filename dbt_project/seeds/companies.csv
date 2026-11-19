@@ -1,0 +1,51 @@
+ticker,name,sector
+AAPL,Apple Inc.,Technology
+MSFT,Microsoft Corporation,Technology
+GOOGL,Alphabet Inc.,Technology
+AMZN,Amazon.com Inc.,Consumer Discretionary
+META,Meta Platforms Inc.,Communication Services
+NVDA,NVIDIA Corporation,Technology
+TSLA,Tesla Inc.,Consumer Discretionary
+CRM,Salesforce Inc.,Technology
+ORCL,Oracle Corporation,Technology
+ADBE,Adobe Inc.,Technology
+NOW,ServiceNow Inc.,Technology
+SNOW,Snowflake Inc.,Technology
+PLTR,Palantir Technologies,Technology
+AMD,Advanced Micro Devices,Technology
+INTC,Intel Corporation,Technology
+AVGO,Broadcom Inc.,Technology
+TSM,Taiwan Semiconductor,Technology
+JPM,JPMorgan Chase,Financials
+BAC,Bank of America,Financials
+GS,Goldman Sachs,Financials
+MS,Morgan Stanley,Financials
+WFC,Wells Fargo,Financials
+V,Visa Inc.,Financials
+MA,Mastercard Inc.,Financials
+WMT,Walmart Inc.,Consumer Staples
+COST,Costco Wholesale,Consumer Staples
+TGT,Target Corporation,Consumer Discretionary
+HD,Home Depot,Consumer Discretionary
+NKE,Nike Inc.,Consumer Discretionary
+SBUX,Starbucks Corporation,Consumer Discretionary
+MCD,McDonald's Corporation,Consumer Discretionary
+JNJ,Johnson & Johnson,Healthcare
+UNH,UnitedHealth Group,Healthcare
+PFE,Pfizer Inc.,Healthcare
+LLY,Eli Lilly and Company,Healthcare
+ABBV,AbbVie Inc.,Healthcare
+XOM,Exxon Mobil,Energy
+CVX,Chevron Corporation,Energy
+COP,ConocoPhillips,Energy
+CAT,Caterpillar Inc.,Industrials
+BA,Boeing Company,Industrials
+GE,General Electric,Industrials
+LMT,Lockheed Martin,Industrials
+NFLX,Netflix Inc.,Communication Services
+DIS,The Walt Disney Company,Communication Services
+CMCSA,Comcast Corporation,Communication Services
+KO,Coca-Cola Company,Consumer Staples
+PEP,PepsiCo Inc.,Consumer Staples
+PG,Procter & Gamble,Consumer Staples
+UPS,United Parcel Service,Industrials

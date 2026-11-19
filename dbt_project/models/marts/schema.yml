@@ -1,0 +1,35 @@
+version: 2
+
+models:
+  - name: dim_companies
+    description: "The 50-company universe used across the benchmark."
+    columns:
+      - name: ticker
+        tests: [unique, not_null]
+      - name: name
+        tests: [not_null]
+      - name: sector
+        tests: [not_null]
+
+  - name: fct_extraction_ground_truth
+    description: "Hand-reconciled Tier-A ground-truth facts per earnings call."
+    columns:
+      - name: ticker
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_companies')
+              field: ticker
+      - name: fiscal_year
+        tests: [not_null]
+      - name: fiscal_quarter
+        tests:
+          - not_null
+          - accepted_values: { values: [1, 2, 3, 4] }
+      - name: record_type
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['headline', 'guidance', 'segment', 'commentary']
+      - name: source_quote
+        tests: [not_null]

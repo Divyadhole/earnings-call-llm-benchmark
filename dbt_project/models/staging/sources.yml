@@ -1,0 +1,25 @@
+version: 2
+
+sources:
+  - name: raw
+    database: "{{ env_var('SNOWFLAKE_DATABASE', 'EARNINGS_BENCH') }}"
+    schema: RAW
+    tables:
+      - name: transcripts
+        description: "Raw earnings-call transcripts ingested from upstream providers."
+        columns:
+          - name: ticker
+            tests: [not_null]
+          - name: call_date
+            tests: [not_null]
+          - name: raw_text
+            tests: [not_null]
+      - name: tier_a_reconciliation
+        description: "Hand-reconciled Tier-A ground-truth rows loaded from CSV seeds."
+        columns:
+          - name: ticker
+            tests: [not_null]
+          - name: fiscal_year
+            tests: [not_null]
+          - name: fiscal_quarter
+            tests: [not_null]
